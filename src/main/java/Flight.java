@@ -62,7 +62,10 @@ public class Flight {
     }
 
     public void bookPassenger(Passenger passenger) {
-        this.passengerList.add(passenger);
-        this.capacity -= 1;
+        if (this.capacity > 0) {
+            this.passengerList.add(passenger);
+            this.capacity -= 1;
+        }
+
     }
 }

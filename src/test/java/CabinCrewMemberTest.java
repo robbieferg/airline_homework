@@ -17,4 +17,9 @@ public class CabinCrewMemberTest {
         assertEquals(Rank.CAPTAIN, cabinCrewMember.getRank());
     }
 
+    @Test
+    public void canSendMessageToPassengers() {
+        assertEquals("Thank you for choosing to fly with us today", cabinCrewMember.relayMessage());
+    }
+
 }

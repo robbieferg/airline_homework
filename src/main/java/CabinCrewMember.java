@@ -16,4 +16,8 @@ public class CabinCrewMember {
     public Rank getRank() {
         return this.rank;
     }
+
+    public String relayMessage() {
+        return "Thank you for choosing to fly with us today";
+    }
 }
