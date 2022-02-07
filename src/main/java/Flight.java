@@ -11,6 +11,7 @@ public class Flight {
     private String destination;
     private String departureAirport;
     private String departureTime;
+    private int capacity;
 
     public Flight(ArrayList<Pilot> pilotList, ArrayList<CabinCrewMember> crewList, Plane plane, String flightNumber, String destination, String departureAirport, String departureTime) {
         this.pilotList = pilotList;
@@ -21,6 +22,7 @@ public class Flight {
         this.destination = destination;
         this.departureAirport = departureAirport;
         this.departureTime = departureTime;
+        this.capacity = plane.getCapacity();
 
     }
 
@@ -53,5 +55,14 @@ public class Flight {
 
     public PlaneType getPlaneType() {
         return this.plane.getPlaneType();
+    }
+
+    public int getCapacity() {
+        return this.capacity;
+    }
+
+    public void bookPassenger(Passenger passenger) {
+        this.passengerList.add(passenger);
+        this.capacity -= 1;
     }
 }
